@@ -4,12 +4,20 @@ import Header from '../Header';
 import PostsList from '../PostsList';
 import Footer from '../Footer';
 
-export default function Layout() {
+export default function Layout( { 
+  onToglleTheme, selectedTheme 
+}) {
   return (
     <>
-      <Header />
+      <Header 
+        onToglleTheme={onToglleTheme}
+        selectedTheme={selectedTheme}
+      />
       <PostsList />
-      <Footer />
+      <Footer 
+        onToglleTheme={onToglleTheme}
+        selectedTheme={selectedTheme}
+      />
     </>
   );
 }
